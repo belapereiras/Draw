@@ -14,6 +14,8 @@
 		1B215C931DD4E4FE00910A83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B215C921DD4E4FE00910A83 /* Assets.xcassets */; };
 		1B215CA11DD4F01D00910A83 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B215CA01DD4F01D00910A83 /* LevelScene.swift */; };
 		1B942DF71DD63C4F0097FB21 /* FloorSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942DF61DD63C4F0097FB21 /* FloorSprite.swift */; };
+		1B942DF91DD641160097FB21 /* BallSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942DF81DD641160097FB21 /* BallSprite.swift */; };
+		1B942DFB1DD641970097FB21 /* HoleSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942DFA1DD641970097FB21 /* HoleSprite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1B215C941DD4E4FE00910A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B215CA01DD4F01D00910A83 /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelScene.swift; path = ../LevelScene.swift; sourceTree = "<group>"; };
 		1B942DF61DD63C4F0097FB21 /* FloorSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorSprite.swift; sourceTree = "<group>"; };
+		1B942DF81DD641160097FB21 /* BallSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallSprite.swift; sourceTree = "<group>"; };
+		1B942DFA1DD641970097FB21 /* HoleSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				1B942DF61DD63C4F0097FB21 /* FloorSprite.swift */,
+				1B942DF81DD641160097FB21 /* BallSprite.swift */,
+				1B942DFA1DD641970097FB21 /* HoleSprite.swift */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -159,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B942DFB1DD641970097FB21 /* HoleSprite.swift in Sources */,
 				1B215CA11DD4F01D00910A83 /* LevelScene.swift in Sources */,
 				1B942DF71DD63C4F0097FB21 /* FloorSprite.swift in Sources */,
+				1B942DF91DD641160097FB21 /* BallSprite.swift in Sources */,
 				1B215C8E1DD4E4FD00910A83 /* GameViewController.swift in Sources */,
 				1B215C841DD4E4FD00910A83 /* AppDelegate.swift in Sources */,
 			);

@@ -13,10 +13,16 @@ import CoreGraphics
 
 class LevelScene: SKScene {
     
+    private var ball : BallSprite!
+    private var hole: HoleSprite!
+    
     private var lastUpdateTime : TimeInterval = 0
     
+    
+
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
+        
         
     //SET UP BACKGROUND
         
@@ -25,38 +31,48 @@ class LevelScene: SKScene {
         background.zPosition = 0
         
         addChild(background)
-        
-    // SET UP FLOOR
-        
-        let floor = SKSpriteNode(imageNamed: "floor")
-        floor.position = CGPoint(x: size.width / 2, y: 110)
 
-        floor.zPosition = 1
-        
-        floor.physicsBody = SKPhysicsBody(edgeFrom: CGPoint(x: -size.width / 2, y: 40), to: CGPoint(x: size.width, y: 0))
-        floor.physicsBody?.isDynamic = false
-        
-        addChild(floor)
-        
+        spawnBall()
+        spawnHole()
+}
+    
     //SET UP BALL
-
-        let ball = SKSpriteNode(imageNamed: "ball")
-        ball.position = CGPoint(x: 390, y: 160)
-        ball.zPosition = 1
+    
+    func spawnBall() {
         
-        ball.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 20, height: 20))
+        if let currentBall = ball, children.contains(currentBall) {
+            ball.removeFromParent()
+            ball.removeAllActions()
+            ball.physicsBody = nil
+        }
+        
+        ball = BallSprite.newInstace()
+        ball.position = CGPoint(x: 390, y: 160)
         
         addChild(ball)
-        
+    }
+    
     //SET UP HOLE
+    
+    func spawnHole() {
         
-        let hole = SKSpriteNode(imageNamed: "hole")
+        if let currentHole = hole, children.contains(currentHole) {
+            hole.removeFromParent()
+            hole.removeAllActions()
+            hole.physicsBody = nil
+        }
+        
+        hole = HoleSprite.newInstace()
         hole.position = CGPoint(x: 1670, y: 230)
-        hole.zPosition = 1
         
         addChild(hole)
-        
     }
+    
+    
+    
+    
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
