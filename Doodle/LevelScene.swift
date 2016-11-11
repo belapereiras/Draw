@@ -30,9 +30,10 @@ class LevelScene: SKScene {
         
         let floor = SKSpriteNode(imageNamed: "floor")
         floor.position = CGPoint(x: size.width / 2, y: 110)
+
         floor.zPosition = 1
         
-        floor.physicsBody = SKPhysicsBody(edgeFrom: CGPoint(x: -size.width / 2, y: 0), to: CGPoint(x: size.width, y: 0)) //ajustar a "moldura" do chao, pra quando a bola cair nao ultrapassar
+        floor.physicsBody = SKPhysicsBody(edgeFrom: CGPoint(x: -size.width / 2, y: 40), to: CGPoint(x: size.width, y: 0))
         floor.physicsBody?.isDynamic = false
         
         addChild(floor)
@@ -40,7 +41,7 @@ class LevelScene: SKScene {
     //SET UP BALL
 
         let ball = SKSpriteNode(imageNamed: "ball")
-        ball.position = CGPoint(x: 390, y: 500) //y: 160 se eu quiser que a bola caia
+        ball.position = CGPoint(x: 390, y: 160)
         ball.zPosition = 1
         
         ball.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 20, height: 20))
