@@ -17,10 +17,8 @@ class MenuScene: SKScene {
     let playButtonTexture = SKTexture(imageNamed: "playButton")
     let playButtonPressedTexture = SKTexture(imageNamed: "pressedPlayButton")
     
-    
-    
-    
     override func sceneDidLoad() {
+        
         
         //SET UP BACKGROUND
         
@@ -34,7 +32,7 @@ class MenuScene: SKScene {
         //SET UP PLAY BUTTON
         
         playButton = SKSpriteNode(texture: playButtonTexture)
-        playButton.position = CGPoint(x: 960, y: 550)
+        playButton.position = CGPoint(x: 950, y: 550)
         
         addChild(playButton)
         
@@ -54,15 +52,55 @@ class MenuScene: SKScene {
         }
     }
     
-}
+    
+    func handlePlayButtonHover(isHovering : Bool) {
+        if isHovering {
+            playButton.texture = playButtonPressedTexture
+        } else {
+            playButton.texture = playButtonTexture
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            
+            if playButton == playButton {
+                handlePlayButtonHover(isHovering: (playButton.contains(touch.location(in: self))))
+            }
+        }
+    }
 
-func handlePlayButtonHover(isHovering : Bool) {
-    if isHovering {
-        playButton.texture = playButtonPressedTexture
-    } else {
-        playButton.texture = playButtonTexture
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            
+            if selectedButton == playButton {
+                handlePlayButtonHover(isHovering: false)
+                
+                if (playButton.contains(touch.location(in: self))) {
+                    handlePlayButtonClick()
+                }
+            }
+        }
+        
+        selectedButton = nil
+    }
+    
+    func handlePlayButtonClick() {
+        print("play clicked")
+    }
+    
+    
+    //CHANGE SCENE : nao ta funcionando!!!
+    func handleButtonClick() {
+        let transition = SKTransition.reveal(with: .down, duration: 0.75)
+        let selectedScene = LevelScene(size: size)
+        selectedScene.scaleMode = scaleMode
+        view?.presentScene(selectedScene, transition: transition)
+    
     }
 }
+
+
 
 
 

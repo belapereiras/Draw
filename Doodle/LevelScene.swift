@@ -23,6 +23,7 @@ class LevelScene: SKScene {
     spawnBall()
     spawnHole()
         
+        
     //SET UP BACKGROUND
         
     let background = SKSpriteNode(imageNamed: "BG")
@@ -30,6 +31,7 @@ class LevelScene: SKScene {
     background.zPosition = 0
         
     addChild(background)
+        
         
     //SET UP FLOOR
         
@@ -43,7 +45,6 @@ class LevelScene: SKScene {
     addChild(floor)
 
 }
-    
     
     //SET UP BALL
     
@@ -61,6 +62,7 @@ class LevelScene: SKScene {
         addChild(ball)
     }
     
+    
     //SET UP HOLE
     
     func spawnHole() {
@@ -76,11 +78,6 @@ class LevelScene: SKScene {
         
         addChild(hole)
     }
-    
-    
-    
-    
-    
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
