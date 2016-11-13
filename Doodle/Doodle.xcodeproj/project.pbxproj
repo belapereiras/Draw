@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1FBAE71DD657EC0069EFC8 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1FBAE61DD657EC0069EFC8 /* MenuScene.swift */; };
 		1B215C841DD4E4FD00910A83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B215C831DD4E4FD00910A83 /* AppDelegate.swift */; };
 		1B215C8A1DD4E4FD00910A83 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B215C891DD4E4FD00910A83 /* Game.xcassets */; };
 		1B215C8E1DD4E4FD00910A83 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B215C8D1DD4E4FD00910A83 /* GameViewController.swift */; };
 		1B215C911DD4E4FD00910A83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B215C8F1DD4E4FD00910A83 /* Main.storyboard */; };
 		1B215C931DD4E4FE00910A83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B215C921DD4E4FE00910A83 /* Assets.xcassets */; };
 		1B215CA11DD4F01D00910A83 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B215CA01DD4F01D00910A83 /* LevelScene.swift */; };
-		1B942DF71DD63C4F0097FB21 /* FloorSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942DF61DD63C4F0097FB21 /* FloorSprite.swift */; };
 		1B942DF91DD641160097FB21 /* BallSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942DF81DD641160097FB21 /* BallSprite.swift */; };
 		1B942DFB1DD641970097FB21 /* HoleSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B942DFA1DD641970097FB21 /* HoleSprite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B1FBAE61DD657EC0069EFC8 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		1B215C801DD4E4FD00910A83 /* Doodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B215C831DD4E4FD00910A83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B215C891DD4E4FD00910A83 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		1B215C921DD4E4FE00910A83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B215C941DD4E4FE00910A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B215CA01DD4F01D00910A83 /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelScene.swift; path = ../LevelScene.swift; sourceTree = "<group>"; };
-		1B942DF61DD63C4F0097FB21 /* FloorSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorSprite.swift; sourceTree = "<group>"; };
 		1B942DF81DD641160097FB21 /* BallSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallSprite.swift; sourceTree = "<group>"; };
 		1B942DFA1DD641970097FB21 /* HoleSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				1B215CA01DD4F01D00910A83 /* LevelScene.swift */,
+				1B1FBAE61DD657EC0069EFC8 /* MenuScene.swift */,
 			);
 			name = GameFiles;
 			sourceTree = "<group>";
@@ -85,7 +86,6 @@
 		1B942DF51DD629420097FB21 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				1B942DF61DD63C4F0097FB21 /* FloorSprite.swift */,
 				1B942DF81DD641160097FB21 /* BallSprite.swift */,
 				1B942DFA1DD641970097FB21 /* HoleSprite.swift */,
 			);
@@ -167,7 +167,7 @@
 			files = (
 				1B942DFB1DD641970097FB21 /* HoleSprite.swift in Sources */,
 				1B215CA11DD4F01D00910A83 /* LevelScene.swift in Sources */,
-				1B942DF71DD63C4F0097FB21 /* FloorSprite.swift in Sources */,
+				1B1FBAE71DD657EC0069EFC8 /* MenuScene.swift in Sources */,
 				1B942DF91DD641160097FB21 /* BallSprite.swift in Sources */,
 				1B215C8E1DD4E4FD00910A83 /* GameViewController.swift in Sources */,
 				1B215C841DD4E4FD00910A83 /* AppDelegate.swift in Sources */,

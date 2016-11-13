@@ -6,10 +6,8 @@
 //  Copyright © 2016 Isabela Pereira. All rights reserved.
 //
 
-import UIKit
 import Foundation
 import SpriteKit
-import CoreGraphics
 
 class LevelScene: SKScene {
     
@@ -18,23 +16,34 @@ class LevelScene: SKScene {
     
     private var lastUpdateTime : TimeInterval = 0
     
-    
 
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
         
+    spawnBall()
+    spawnHole()
         
     //SET UP BACKGROUND
         
-        let background = SKSpriteNode(imageNamed: "BG")
-        background.position = CGPoint(x: frame.midX, y: frame.midY)
-        background.zPosition = 0
+    let background = SKSpriteNode(imageNamed: "BG")
+    background.position = CGPoint(x: frame.midX, y: frame.midY)
+    background.zPosition = 0
         
-        addChild(background)
+    addChild(background)
+        
+    //SET UP FLOOR
+        
+    let floor = SKSpriteNode(imageNamed: "floor")
+    floor.position = CGPoint(x: size.width / 2, y: 110)
+        
+    floor.physicsBody = SKPhysicsBody(edgeFrom: CGPoint(x: -size.width / 2, y: 40),
+                                      to: CGPoint(x: size.width, y: 0))
+    floor.physicsBody?.isDynamic = false
+        
+    addChild(floor)
 
-        spawnBall()
-        spawnHole()
 }
+    
     
     //SET UP BALL
     

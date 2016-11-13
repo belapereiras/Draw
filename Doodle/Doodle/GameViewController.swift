@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
         
     //SET UP LEVEL SCENE
 
-    let sceneNode = LevelScene(size: view.frame.size)
+    let sceneNode = MenuScene(size: view.frame.size)
     
     if let view = self.view as! SKView? {
         view.presentScene(sceneNode)
